@@ -4,11 +4,39 @@
   <head>
     <meta charset="utf-8">
     <title>Django Guitar Page</title>
-      <link rel="stylesheet" href="{% static 'CSS/mystyle.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/mystyle.css' %}?v={% now 'U' %}">
   </head>
   <body>
     <h1>Hi, this is a picture of Django himself!</h1>
     <p>{{insert_me}}</p>
     <img src="{% static 'images/djangoguitar.jpg' %}" alt="Uh oh, image did not show!">
+    <h1>Hi! Welcome to Django Level two!</h1>
+    <h2>Here are your access records</h2>
+    <div class="djangotwo">
+        {% if access_records %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Site Name</th>
+                    <th>Date Accessed</th>
+                </tr>
+            </thead>
+            {% for acc in access_records %}
+            <tr>
+                <td>
+                    {{ acc.name }}
+                </td>
+                <td>
+                    {{ acc.date }}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+            <p>
+                NO ACCESS RECORDS FOUND
+            </p>
+        {% endif %}
+    </div>
   </body>
 </html>
