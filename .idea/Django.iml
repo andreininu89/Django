@@ -13,11 +13,7 @@
     </facet>
   </component>
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/Django_Level_One/first_project" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/venv/lib/python3.14/site-packages" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/venv" />
-    </content>
+    <content url="file://$MODULE_DIR$/Django_Level_One/first_project" />
     <orderEntry type="jdk" jdkName="Python 3.14 (Django)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
