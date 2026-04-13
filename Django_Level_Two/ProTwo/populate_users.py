@@ -6,7 +6,7 @@ import django
 
 django.setup()
 
-from appTwo.models import Users
+from appTwo.models import User
 from faker import Faker
 
 fake = Faker()
@@ -19,7 +19,7 @@ def populate_users(n=5):
         fake_last_name = fake_name[1]
         fake_email = fake.email()
 
-        user = Users.objects.get_or_create(
+        user = User.objects.get_or_create(
             first_name=fake_first_name, last_name=fake_last_name, email=fake_email
         )[0]
 
