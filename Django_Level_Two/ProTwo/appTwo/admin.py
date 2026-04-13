@@ -1,5 +1,5 @@
 from django.contrib import admin
-from appTwo.models import Users
+from appTwo.models import User
 
 # Register your models here.
-admin.site.register(Users)
+admin.site.register(User)
