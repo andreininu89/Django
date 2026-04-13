@@ -13,8 +13,16 @@ def get_form_name(request):
         if form.is_valid():
             # process the data in form.cleaned_data as required
             # ...
+            print("VALIDATION SUCCESSFUL")
+            print("NAME:", form.cleaned_data["name"])
+            print("EMAIL:", form.cleaned_data["email"])
+            print("VEMAIL:", form.cleaned_data["verify_email"])
+            print("text:", form.cleaned_data["text"])
             # redirect to a new URL:
             return HttpResponseRedirect("/form_page/")
+        else:
+            print("VALIDATION FAILED")
+            return render(request, "basicapp/form_page.html", {"form": form})
 
     # if a GET (or any other method) we'll create a blank form
     else:
