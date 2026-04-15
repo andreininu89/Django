@@ -1,10 +1,20 @@
 from django import forms
+from django.contrib.auth.models import User
 from basic_app.models import UserProfileInfo
 
-class UserProfileInfoForm(forms.ModelForm):
-    portfolio = forms.URLField(required=False)
-    picture = forms.ImageField(required=False)
+
+class UserForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput())
 
     class Meta:
+        model = User
+        fields = ("username", "email", "first_name", "last_name", "password")
+
+
+class UserProfileInfo(forms.ModelForm):
+    class Meta:
         model = UserProfileInfo
-        exclude = ('user',)
+        fields = (
+            "portfolio",
+            "profile_pic",
+        )
