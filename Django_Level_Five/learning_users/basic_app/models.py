@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class UserProfileInfo(models.Model):
 
     # Create relationship (don't inherit from User!)
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     # Add any additional attributes you want
     portfolio = models.URLField(max_length=200, blank=True)
