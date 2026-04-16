@@ -1,5 +1,14 @@
 from django.shortcuts import render
-from django.views.generic import View, TemplateView, ListView, DetailView
+from django.urls import reverse_lazy
+from django.views.generic import (
+    View,
+    TemplateView,
+    ListView,
+    DetailView,
+    CreateView,
+    UpdateView,
+    DeleteView,
+)
 from django.http import HttpResponse
 from basic_app import models
 
@@ -28,3 +37,18 @@ class SchoolDetailView(DetailView):
     model = models.School
     template_name = "basic_app/school_detail.html"
     context_object_name = "school_detail"
+
+
+class SchoolCreateView(CreateView):
+    model = models.School
+    fields = ("name", "principal", "location")
+
+
+class SchoolUpdateView(UpdateView):
+    model = models.School
+    fields = ("name", "principal")
+
+
+class SchoolDeleteView(DeleteView):
+    model = models.School
+    success_url = reverse_lazy("basic_app:list")
