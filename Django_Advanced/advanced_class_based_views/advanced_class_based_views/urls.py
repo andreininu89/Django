@@ -23,5 +23,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.CBView.as_view()),
     path("index/", views.IndexView.as_view()),
-    path("basic_app/", include("basic_app.urls")),
+    path("basic_app/", include("basic_app.urls", namespace="basic_app")),
 ]
