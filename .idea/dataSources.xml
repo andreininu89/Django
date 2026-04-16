@@ -37,5 +37,14 @@
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/Django_Level_Five/learning_users/db.sqlite3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="Django default5" uuid="b6eb87ca-5507-41db-aa31-24cac4eb142c">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/Django_Advanced/advanced_class_based_views/advanced_class_based_views/settings.py</remarks>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/Django_Advanced/advanced_class_based_views/db.sqlite3</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
